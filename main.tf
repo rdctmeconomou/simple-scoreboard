@@ -14,3 +14,8 @@ provider "aws" {
     tags = jsondecode(var.TAGS_ALL)
   }
 }
+
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/aws/lambda/${var.STACK_NAME}"
+  retention_in_days = 3
+}
