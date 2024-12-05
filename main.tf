@@ -7,6 +7,12 @@ terraform {
       version = ">= 5.80"
     }
   }
+
+  backend "s3" {
+    bucket         = "s3-tfstate-statestoragebucket-cpoanqxuq8g1"
+    key            = "simple-scoreboard.tfstate"
+    dynamodb_table = "s3-tfstate-StateLockingTable-IKBYGM4LII9M"
+  }
 }
 
 provider "aws" {
