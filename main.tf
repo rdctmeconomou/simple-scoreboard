@@ -97,6 +97,11 @@ resource "aws_lambda_function" "this" {
 
   logging_config {
     log_group  = aws_cloudwatch_log_group.this.name
-    log_format = "JSON"
+    log_format = "Text"
   }
+}
+
+resource "aws_lambda_function_url" "this" {
+  function_name      = aws_lambda_function.this.function_name
+  authorization_type = "NONE"
 }
