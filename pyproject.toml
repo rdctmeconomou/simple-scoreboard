@@ -32,6 +32,7 @@ dependencies = [
 dev = [
     "black",
     "checkov",
+    "flake8-bugbear",
     "isort",
 ]
 test = [
