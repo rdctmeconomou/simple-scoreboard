@@ -42,15 +42,15 @@ repos:
     hooks:
       - id: tofu_validate
       - id: tofu_fmt
-      - id: tofu_docs
+      # - id: tofu_docs
       # - id: tofu_checkov
       - id: tofu_tflint
       # - id: tofu_trivy
       # - id: terrascan
       # - id: infracost_breakdown
 
-  # Check GitHub Actions workflows.
-  - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.4
-    hooks:
-      - id: actionlint
+  # Check GitHub Actions workflows (NB: breaks under Rosetta 2).
+  # - repo: https://github.com/rhysd/actionlint
+  #   rev: v1.7.4
+  #   hooks:
+  #     - id: actionlint
